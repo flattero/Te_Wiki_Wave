@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Controlled Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="title">
+          <h1>Te Wiki o te Reo Māori - Kīanga Matapōkere (Random Phrase)</h1>
+      </div>
+
+    <div id="container">
+        <!-- Video element for camera feed (hidden, but required for handpose) -->
+        <video id="video" autoplay muted playsinline style="display:none;"></video>
+
+        <!-- Canvas for video and image -->
+        <canvas id="canvas"></canvas>
+
+        <!-- Quote section for displaying phrases -->
+        <div id="quote-section">
+            <div id="quote-container">
+                <p id="quote">Tu ki mua o te kamera ka tuu to ringa ki runga i te ahua!</p>
+            </div>
+            <div id="quote-container-english">
+                <p id="quote-english">Stand in front of the camera and place your hand on the image!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TensorFlow.js and Handpose model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+
+    <!-- Your custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
